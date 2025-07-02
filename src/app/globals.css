@@ -10,17 +10,112 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-body:var(--font-body);
+  --font-display:var(--font-display);
+  --font-third:var(--font-third);
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 1024px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: (--font-body);
 }
+
+.font-body {
+  font-family: var(--font-body)
+}
+
+.font-display {
+  font-family: var(--font-display)
+}
+
+.font-third {
+  font-family: var(--font-third)
+}
+
+h1 {
+  color: white;
+  font-size: 6.5vw;
+  line-height: 1;
+}
+
+.text-primary {
+  color: #0A3CCE
+}
+
+.bg-primary {
+  background-color: #0A3CCE;
+}
+
+.bg-secondary {
+  background-color: #02268E;
+}
+
+.link {
+  position: relative;
+  width: fit-content;
+  display: block;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 1px; 
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.footer-links {
+  position: relative;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .footer-top {
+  height: 100%;
+} */
+
+.footer-links::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0;
+  height: 0;
+  background-color: #0A3CCE ;
+  width: 100%;
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+.footer-links:hover::after {
+  opacity: 1;
+  height: 100%;
+  transform: scaleY(1);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+
+}
+
+/* h2 {
+  font-size: 7vw;
+} */
