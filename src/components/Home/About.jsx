@@ -51,7 +51,7 @@ const About = () => {
 
         
         <p className='uppercase font-body max-sm:text-[3.7vw] max-sm:text-nowrap max-sm:font-body max-sm:font-medium max-md:text-[3vw] max-sm:pl-[2vw] text-[1.3vw] font-medium'>Unlocking the World’s Largest Asset Class</p>
-        <p className='font-body text-[4.2vw] max-sm:text-[9.6vw] max-sm:leading-[1.1] pt-[3vw] leading-[1.1] about-text max-md:tracking-tighter max-sm:tracking-tighter  max-sm:pl-[2vw] max-sm:pt-[8vw] max-md:text-[7.5vw]'>
+        <p className='font-body text-[4.2vw] max-sm:text-[9.6vw] max-sm:leading-[1.1] pt-[3vw] leading-[1.1] about-text max-md:tracking-tighter max-sm:tracking-tighter  max-sm:pl-[2vw] max-sm:pt-[8vw] max-md:text-[7.5vw]'  aria-hidden="true">
             Create a Digital Twin Token (DTT®) of your existing building and release the potential of Web3.
         </p>
         </div>

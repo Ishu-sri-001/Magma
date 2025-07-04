@@ -54,7 +54,7 @@ const Feature = () => {
 
         
         <p className='uppercase text-[1.2vw] font-body max-sm:text-[4vw] max-md:text-[3vw]'>Maximizing building value</p>
-        <p className='font-body tracking-tight text-[4.2vw] pt-[3vw] leading-[1.2] max-sm:pt-[8vw] max-sm:text-[9.5vw] max-sm:leading-[1.1] max-sm:tracking-tighter max-md:tracking-tighter feature-text max-md:text-[8vw]'>
+        <p className='font-body tracking-tight text-[4.2vw] pt-[3vw] leading-[1.2] max-sm:pt-[8vw] max-sm:text-[9.5vw] max-sm:leading-[1.1] max-sm:tracking-tighter max-md:tracking-tighter feature-text max-md:text-[8vw]'  aria-hidden="true">
             The DTT® lowers operational costs, improves energy use, facilitates commercialization, and ultimately increases the value of the building
         </p>
         </div>

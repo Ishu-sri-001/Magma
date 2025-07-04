@@ -45,6 +45,7 @@ const MobileHeader = () => {
         <button 
           className={`p-[2vw] rounded-full border border-white/50 py-[2.5vw] px-[6vw] hover:bg-white hover:bg-opacity-10 transition-colors duration-200 ${isSidebarOpen ? 'bg-primary' : ''}`}
           onClick={toggleSidebar}
+          aria-label={isSidebarOpen ? 'Close menu' : 'Open menu'}
         >
           <div className='flex flex-col w-[4.5vw] h-[3.5vw] justify-between z-52'>
             <span className={`w-full opacity-50 h-[0.5vw] bg-white transition-all duration-300 ${isSidebarOpen ? 'transform rotate-45 translate-x-[1vw] translate-y-[1.7vw]' : ''}`}></span>
