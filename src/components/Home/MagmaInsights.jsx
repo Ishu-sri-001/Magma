@@ -66,7 +66,7 @@ const MagmaInsights = () => {
                     </span>
             </h2>
             <div className='h-[32vw] w-fit max-sm:px-0 max-sm:w-full  max-sm:h-[55vw] max-md:h-[60vw] '>
-                <Image src='/assets/insights/intro.jpeg' width={900} height={900} className='w-full h-full rounded-[1vw] object-cover max-md:rounded-[4vw] max-sm:rounded-[5vw]' alt='' />
+                <Image src='/assets/insights/intro.jpeg' width={900} height={900} className='w-full h-full rounded-[1vw] object-cover max-md:rounded-[4vw] max-sm:rounded-[5vw]' alt='intro' />
             </div>
             
         </div>

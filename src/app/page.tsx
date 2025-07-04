@@ -1,20 +1,35 @@
-
+'use client'
 import Hero from "@/components/Home/Hero";
 import Header from "@/components/Header/Header";
 import About from "@/components/Home/About"
-import StructureCanvas from "@/components/Home/StructureCanvas"
-import Intro from "@/components/Home/Intro";
-import BuildingCanvas from "@/components/Home/BuildingCanvas"
-import Feature from "@/components/Home/Feature";
-import MagmaDTT from "@/components/Home/MagmaDTT";
-import MagmaInsights from "@/components/Home/MagmaInsights"
-import DTTCreation from "@/components/Home/DTTCreation"
-import DTTCreationMobile from "@/components/Home/DTTCreationMobile"
-import Stakeholders from "@/components/Home/Stakeholders";
-import Blog from '@/components/Home/Blog'; 
-import FeaturedIn from "@/components/Home/FeaturedIn"
-import Footer from "@/components/Home/Footer"
+// import StructureCanvas from "@/components/Home/StructureCanvas"
+// import Intro from "@/components/Home/Intro";
+// import BuildingCanvas from "@/components/Home/BuildingCanvas"
+// import Feature from "@/components/Home/Feature";
+// import MagmaDTT from "@/components/Home/MagmaDTT";
+// import MagmaInsights from "@/components/Home/MagmaInsights"
+// import DTTCreation from "@/components/Home/DTTCreation"
+// import DTTCreationMobile from "@/components/Home/DTTCreationMobile"
+// import Stakeholders from "@/components/Home/Stakeholders";
+// import Blog from '@/components/Home/Blog'; 
+// import FeaturedIn from "@/components/Home/FeaturedIn"
+// import Footer from "@/components/Home/Footer"
 import MobileHeader from '@/components/Header/HeaderMobile'
+
+import dynamic from 'next/dynamic';
+
+const StructureCanvas = dynamic(() => import('@/components/Home/StructureCanvas'), { ssr: true });
+const BuildingCanvas = dynamic(() => import('@/components/Home/BuildingCanvas'), { ssr: true });
+const Intro = dynamic(() => import('@/components/Home/Intro'));
+const Feature = dynamic(() => import('@/components/Home/Feature'));
+const MagmaDTT = dynamic(() => import('@/components/Home/MagmaDTT'));
+const MagmaInsights = dynamic(() => import('@/components/Home/MagmaInsights'));
+const DTTCreation = dynamic(() => import('@/components/Home/DTTCreation'));
+const DTTCreationMobile = dynamic(() => import('@/components/Home/DTTCreationMobile'));
+const Stakeholders = dynamic(() => import('@/components/Home/Stakeholders'), { ssr: false });
+const Blog = dynamic(() => import('@/components/Home/Blog'), { ssr: true });
+const FeaturedIn = dynamic(() => import('@/components/Home/FeaturedIn'), { ssr: true });
+const Footer = dynamic(() => import('@/components/Home/Footer'), { ssr: true });
 
 export default function Home() {
   return (

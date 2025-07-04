@@ -126,7 +126,7 @@ const Footer = () => {
               placeholder="E-mail"
               className="flex-1 bg-transparent max-md:placeholder-white  text-white placeholder-gray-400 py-2 pr-4 "
             />
-            <button className="ml-4 text-gray-400 hover:text-white transition-colors">
+            <button className="ml-4 text-gray-400 hover:text-white transition-colors"  aria-label="Go back">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>

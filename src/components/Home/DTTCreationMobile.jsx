@@ -28,7 +28,7 @@ const DTTCreationMobile = () => {
     },
     {
       id: '03',
-      title: 'Minting the building’s Digital Twin Token',
+      title: "Minting the building's Digital Twin Token",
       description: 'The unique digital asset of the building. It contains a 3D model and all its data'
     },
     {
@@ -83,13 +83,19 @@ const DTTCreationMobile = () => {
         <h2 className='max-sm:text-[15vw] text-[10vw] text-white font-body font-medium creation-txt-mobile mb-[15vw]'>DTT Creation</h2>
       </div>
 
-      <div className='w-full px-[7vw] max-sm:pl-[7vw] pl-[12svw] space-y-[15vw]'>
+      <div className='w-full px-[7vw] max-sm:pl-[7vw] pl-[12svw] space-y-[15vw] relative'>
+        {/* Vertical Line */}
+        <div className='absolute left-[3vw] max-sm:top-[80vw] max-sm:left-[6vw] top-[50vw] w-[2px] h-[190vh] max-sm:h-[213vh] bg-blue-800 z-10'></div>
+        
         {steps.map((step, index) => (
           <div
             key={step.id}
             ref={el => (stepsRef.current[index] = el)}
-            className='w-full'
+            className='w-full relative'
           >
+            {/* Circle */}
+            <div className='absolute left-[-10vw] max-sm:left-[-2vw] top-[49vw] max-sm:top-[80vw] w-[2vw] max-sm:w-[3vw] h-[2vw] max-sm:h-[3vw] rounded-full bg-blue-800 z-20'></div>
+
             {/* Image */}
             <div className={`max-sm:w-[80vw] max-sm:pl-[10vw] max-sm:h-full h-[45vw] mb-[3.2svw] w-fit max-sm:mb-[8vw] ${isActive === index ? 'opacity-100' : 'opacity-40'}`}>
               <Image

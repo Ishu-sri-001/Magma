@@ -165,17 +165,18 @@ const handleMouseLeave = () => {
 
  return (
   <div className='w-full bg-gray-200 h-fit max-sm:pl-0 max-md:pl-0 max-sm:pr-0 pl-[2vw] py-[5vw] max-md:pb-[20vh] stakeholder-container relative max-sm:pt-[10vh]'>
-    {/* Custom Cursor - Move here, top-level */}
-    <img 
+    
+    {/* <img 
+      loading="lazy"
       ref={cursorRef} 
       src="/assets/cursor-arrow.png" 
       alt="Custom Cursor" 
       className="pointer-events-none fixed w-[50px] h-[50px] z-[9999]" 
       style={{ 
         transform: 'translate(-50%, -50%)', 
-        opacity: 0, // start hidden
+        opacity: 0, 
       }} 
-    />
+    /> */}
 
     <div className='w-full pl-[7vw] max-md:pl-[6vw] max-sm:pl-[4vw] py-[5vw] max-sm:py-[10vw] max-md:py-[10vh]'>
       <h2 className='text-[6.5vw] font-body font-normal max-sm:leading-[1.1] max-sm:text-[15vw] max-sm:font-medium max-md:font-medium max-md:text-[10vw] stakeholder-text tracking-tighter'>For All Stakeholders</h2>

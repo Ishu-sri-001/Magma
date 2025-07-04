@@ -41,6 +41,7 @@ const Header = () => {
                         <button 
                             className={`p-[0.5vw] z-52 rounded-full border border-white/40 py-[0.7vw] px-[1.5vw] max-md:px-[3.5vw] max-md:py-[2vw] cursor-pointer hover:bg-opacity-10 transition-colors duration-200 ${isSidebarOpen ? 'bg-primary' : ''}`}
                             onClick={toggleSidebar}
+                            aria-label={isSidebarOpen ? 'Close menu' : 'Open menu'}
                         >
                             <div className='flex flex-col w-[1.2vw] h-[1vw] max-md:h-[1.5vw] max-md:w-[2vw] justify-between'>
                                 <span className={`w-full h-[0.1vw] bg-white transition-all  duration-300 ${isSidebarOpen ? 'transform rotate-45 translate-y-[0.4vw]' : ''}`}></span>
