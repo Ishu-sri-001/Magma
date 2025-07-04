@@ -164,7 +164,7 @@ const handleMouseLeave = () => {
 
 
  return (
-  <div className='w-full h-fit bg-white px-[2vw] py-[5vw] stakeholder-container relative'>
+  <div className='w-full bg-gray-200 h-fit max-sm:pl-0 max-md:pl-0 max-sm:pr-0 pl-[2vw] py-[5vw] max-md:pb-[20vh] stakeholder-container relative max-sm:pt-[10vh]'>
     {/* Custom Cursor - Move here, top-level */}
     <img 
       ref={cursorRef} 
@@ -177,34 +177,49 @@ const handleMouseLeave = () => {
       }} 
     />
 
-    <div className='w-full pl-[5vw] py-[5vw]'>
-      <h2 className='text-[6.5vw] font-body font-normal stakeholder-text'>For All Stakeholders</h2>
+    <div className='w-full pl-[7vw] max-md:pl-[6vw] max-sm:pl-[4vw] py-[5vw] max-sm:py-[10vw] max-md:py-[10vh]'>
+      <h2 className='text-[6.5vw] font-body font-normal max-sm:leading-[1.1] max-sm:text-[15vw] max-sm:font-medium max-md:font-medium max-md:text-[10vw] stakeholder-text tracking-tighter'>For All Stakeholders</h2>
     </div>
 
-    <div className="relative w-full h-full" ref={containerRef}>
+    <div className="relative w-full h-full max-sm:pl-0 max-md:pl-0 pl-[2vw] pr-0 max-sm:pb-[20vw]" ref={containerRef}>
       <Swiper 
         slidesPerView={2.7} 
-        spaceBetween={10} 
-        className="mySwiper w-full !pl-[3vw] !pr-[3vw]"
+        spaceBetween={0} 
+        className="mySwiper w-full !pl-[5vw] !pr-0 max-sm:pr-0 max-sm:pl-0"
+
+        breakpoints={{
+    // For mobile devices (0px and up)
+    0: {
+      slidesPerView: 1.2,
+    },
+    // For tablets (640px and up)
+    640: {
+      slidesPerView: 1.2,
+    },
+    // For desktops (1024px and up)
+    1024: {
+      slidesPerView: 2.5,
+    },
+  }}
        
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       > 
         {stakeholderCards.map((card, idx) => (
           <SwiperSlide key={idx}>
-            <div className='w-[33vw] h-fit rounded-[2vw] p-[0.5vw]'>
-              <div className='h-[50vh] group w-fit rounded-[2vw] overflow-hidden'>
-                <Image src={card.image} height={900} width={900} alt='stakeholder' className='h-full w-full object-fill group-hover:scale-110 duration-700 ease-in-out' />
+            <div className='w-[33vw] max-md:w-full max-sm:w-[74vw] h-fit rounded-[2vw] p-[0.5vw]'>
+              <div className='h-[50vh] max-sm:h-[27vh] group w-fit max-sm:w-[75vw]] max-md:w-[75vw] rounded-[2vw] overflow-hidden max-md:h-[35vh]'>
+                <Image src={card.image} height={900} width={900} alt='stakeholder' className='h-full max-sm:rounded-[4vw] w-full object-fill group-hover:scale-110 duration-700 ease-in-out' />
               </div>
               <div>
-                <p className='text-[2.5vw] font-body py-[1.5vw] font-semibold pl-[1vw]'>{card.role}</p>
-                <ul className="list-none pl-4 space-y-2 text-[1.1vw] pr-[1vw]">
+                <p className='text-[2.5vw] max-sm:leading-[1] max-sm:text-[10vw] font-body py-[1vw] font-medium pl-[1vw] max-sm:py-[3vw] max-md:text-[6vw] max-md:font-medium max-sm:tracking-tighter'>{card.role}</p>
+                <ul className="list-none pl-4  space-y-1 text-[1.1vw] pr-[1vw]">
                   {card.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <svg className='mt-[0.5vw]' xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 20 15" fill="none">
+                      <svg className='mt-[0.5vw]  max-sm:mt-[2vw] max-md:h-[2vw] max-sm:h-[4vw] max-sm:w-[4vw]' xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 20 15" fill="none">
                         <path d="M2 8L7 13L18 2" stroke="#444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      <span>{item}</span>
+                      <span className='max-sm:text-[4.2vw] font-semibold font-body tracking-tight max-sm:w-full max-md:text-[3vw]'>{item}</span>
                     </li>
                   ))}
                 </ul>

@@ -78,7 +78,7 @@ const BuildingCanvas = () => {
   }, [images]);
 
   return (
-    <div ref={containerRef} className="h-[200vh] -mt-[2vw] w-full   overflow-hidden ">
+    <div ref={containerRef} className="h-[200vh] max-sm:h-[90vh] -mt-[2vw] w-full max-sm:w-screen overflow-hidden ">
       <canvas
         ref={canvasRef}
         width={1280}

@@ -74,7 +74,7 @@ const StructureCanvas = () => {
 
 
   return (
-    <div ref={containerRef} className="h-[100vh] w-full  overflow-hidden">
+    <div ref={containerRef} className="h-[100vh] max-sm:w-screen max-sm: max-sm:h-[90vh] w-full  overflow-hidden">
       <canvas
         ref={canvasRef}
         width={1280}

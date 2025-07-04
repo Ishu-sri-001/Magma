@@ -79,6 +79,31 @@ h1 {
   transition: transform 0.3s ease;
 }
 
+.head-link {
+  position: relative;
+  width: fit-content;
+  display: block;
+}
+
+.head-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  height: 1px; 
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.head-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
 .footer-links {
   position: relative;
   height:100%;
@@ -116,6 +141,22 @@ h1 {
 
 }
 
+@media (max-width: 1060px) {
+  h1 {
+    font-size : 10vw;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 16vw;
+  }
+}
+
+
+
 /* h2 {
   font-size: 7vw;
 } */
+
+

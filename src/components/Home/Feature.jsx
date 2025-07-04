@@ -1,6 +1,7 @@
 'use client';
 
 import React, {useEffect} from 'react'
+import useMobile from '@/components/Home/isMobile'
 import gsap from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import SplitText from 'gsap/dist/SplitText';
@@ -9,7 +10,9 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Feature = () => {
 
+    const isMobile = useMobile();
 
+    
     useEffect(() => {
     const ctx= gsap.context(() => {
         const splitText = new SplitText(".feature-text", {
@@ -46,12 +49,12 @@ const Feature = () => {
 }, []);
 
   return (
-    <section className='h-screen w-full bg-primary' id='feature'>
-        <div className='feature-container h-full w-full bg-primary flex flex-col text-white justify-center px-[7%]'>
+    <section className='h-fit py-[10vh] relative z-[80] max-md:h-[70vh] max-sm:h-fit  max-sm:w-screen max-sm:px-[1.5vw]  max-sm:bg-[#0D36C5] w-full bg-primary' id='feature'>
+        <div className='feature-container h-full w-full bg-primary flex flex-col text-white justify-center max-md:px-[5vw] max-md:leading-[1.1] max-sm:px-[4vw] px-[10vw] '>
 
         
-        <p className='uppercase font-body'>Maximizing building value</p>
-        <p className='font-body text-[4vw] pt-[3vw] leading-[1.2] feature-text '>
+        <p className='uppercase text-[1.2vw] font-body max-sm:text-[4vw] max-md:text-[3vw]'>Maximizing building value</p>
+        <p className='font-body tracking-tight text-[4.2vw] pt-[3vw] leading-[1.2] max-sm:pt-[8vw] max-sm:text-[9.5vw] max-sm:leading-[1.1] max-sm:tracking-tighter max-md:tracking-tighter feature-text max-md:text-[8vw]'>
             The DTT® lowers operational costs, improves energy use, facilitates commercialization, and ultimately increases the value of the building
         </p>
         </div>

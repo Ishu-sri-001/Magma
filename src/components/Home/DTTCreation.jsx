@@ -4,10 +4,13 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import SplitText from 'gsap/dist/SplitText';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import UseTablet from './IsTablet';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const DTTCreation = () => {
+
+  const isMobile = UseTablet();
   const [isActive, setIsActive] = useState(0);
   const stepsRef = useRef([]);
 
@@ -69,18 +72,23 @@ const DTTCreation = () => {
     return () => ctx.revert();
   }, []);
 
+  if(isMobile)
+  {
+    return null;
+  }
+
 
   return (
     <div className='h-fit w-full py-[10vw] relative dttcreation-container bg-[#02268E]'>
-      <div className='w-full pl-[7vw]'>
-        <h2 className='text-[6vw] text-white font-body font-normal creation-txt'>DTT Creation</h2>
+      <div className='w-full pl-[10vw]'>
+        <h2 className='text-[6.5vw] text-white font-body font-normal creation-txt'>DTT Creation</h2>
 
        
       </div>
 
-      <div className='w-full flex pt-[5vw] h-full  px-[5vw]'>
-        <div className='w-[50%]  pr-[5vw] pb-[5vw] pl-[5vw]'>
-             <div className='text-white space-y-[10vw] mt-[5vw]'>
+      <div className='w-full flex pt-[5vw] h-full px-[5vw]'>
+        <div className='w-[45%]  pr-[5vw] pb-[5vw] pl-[7vw]'>
+             <div className='text-white max-sm:pl-[4vw] space-y-[10vw] mt-[5vw]'>
           {steps.map((step, index) => (
             <div
               key={step.id}
@@ -89,16 +97,16 @@ const DTTCreation = () => {
                 isActive === index ? 'opacity-100' : 'opacity-40'
               }`}
             >
-              <p className='text-[1vw] font-body font-bold pb-[2vw]'>{step.id}</p>
+              <p className='text-[0.9vw] font-body font-bold pb-[2vw]'>{step.id}</p>
               <p className='text-[3.5vw] leading-[1] font-medium font-body pb-[1.5vw]'>{step.title}</p>
-              <p className='text-[1.5vw] font-body pr-[2vw]'>{step.description}</p>
+              <p className='text-[1.3vw] font-body pr-[2vw]'>{step.description}</p>
             </div>
           ))}
         </div>
         </div>
 
-        <div className='w-[50%]  h-fit sticky top-[20%] pl-[5vw]'>
-          <div className='h-[70vh] w-fit pb-[4vw]'>
+        <div className='w-[50%]  h-fit sticky top-0 pl-[5vw]'>
+          <div className='h-[80vh] w-[40vw] pb-[8vw]'>
            <Image
                 src={`/canva/creation/${images[isActive]}`}
                 width={900}

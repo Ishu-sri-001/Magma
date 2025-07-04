@@ -30,13 +30,13 @@ const About = () => {
         gsap.fromTo(splitText.chars,{
              opacity: 0.2,
         }, {
-            stagger:0.2,
+            stagger:0.1,
             // color: `#fff`,
             opacity: 1,
             scrollTrigger: {
                 trigger: ".about-text",
                 start: "top 90%",
-                end: "70% 50%",
+                end: "70% 70%",
                 scrub:true,
                 // markers: true
             }
@@ -46,13 +46,13 @@ const About = () => {
 }, []);
 
   return (
-    <section className='h-screen w-full bg-primary ' id='about'>
-        <div className='about-container h-full w-full bg-primary flex flex-col text-white justify-center px-[7%]'>
+    <section className='h-screen max-md:h-fit max-md:py-[25%] max-sm:h-fit max-sm:pt-[25vh] max-sm:w-screen w-full bg-primary max-sm:px-[3vw]' id='about'>
+        <div className='about-container h-full w-full bg-primary flex flex-col text-white justify-center px-[10vw] max-md:pl-[5vw] max-sm:pl-0 max-sm:pr-0 max-md: max-sm:px-[4vw] '>
 
         
-        <p className='uppercase font-body'>Unlocking the World’s Largest Asset Class</p>
-        <p className='font-body text-[4vw] pt-[3vw] leading-[1.2] about-text  '>
-            Real estate, a $300Tn market, faces inefficiencies and environmental challenges. Magma’s AI-driven platform leverages DePIN and tokenization to connect buildings with Web3.
+        <p className='uppercase font-body max-sm:text-[3.7vw] max-sm:text-nowrap max-sm:font-body max-sm:font-medium max-md:text-[3vw] max-sm:pl-[2vw] text-[1.3vw] font-medium'>Unlocking the World’s Largest Asset Class</p>
+        <p className='font-body text-[4.2vw] max-sm:text-[9.6vw] max-sm:leading-[1.1] pt-[3vw] leading-[1.1] about-text max-md:tracking-tighter max-sm:tracking-tighter  max-sm:pl-[2vw] max-sm:pt-[8vw] max-md:text-[7.5vw]'>
+            Create a Digital Twin Token (DTT®) of your existing building and release the potential of Web3.
         </p>
         </div>
     </section>

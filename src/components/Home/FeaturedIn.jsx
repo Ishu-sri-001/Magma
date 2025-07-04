@@ -25,7 +25,6 @@ const FeaturedIn = () => {
           trigger: ".featuredIn-container",
           start: "30% 70%",
         //   markers: true,
-          
         },
       })
 
@@ -81,19 +80,19 @@ const FeaturedIn = () => {
     const allImages = [...links, ...links2];
 
     return (
-        <section className='w-full h-screen py-[10vw] bg-secondary featuredIn-container'>
-            <div className='w-full flex flex-col items-end pr-[20vw]'>
-                <h2 className='text-[6.5vw] font-body font-medium featured-text text-white featuredIn-text'>Featured In</h2>
-                <p className='text-white featuredIn-para font-body text-[1.2vw] w-[29vw]'>Thrilled to have been featured in several prominent media outlets and leading professionals across the world's best real estate and web3 institutions.</p>
+        <section className='w-full max-md:h-fit max-md:py-[10vh] h-screen max-sm:h-fit max-sm:py-[30vw] py-[10vw] bg-secondary featuredIn-container'>
+            <div className='w-full flex flex-col items-end max-md:items-start max-md:pl-[4vw] max-sm:items-start pr-[20vw] max-sm:pr-0 max-sm:pl-[5vw] max-sm:pt-[10vw]'>
+                <h2 className='text-[6.5vw] max-sm:text-[15vw] font-body font-medium tracking-tight featured-text text-white max-md:text-[10vw] featuredIn-text'>Featured In</h2>
+                <p className='text-white featuredIn-para font-body text-[1.2vw] w-[29vw] max-sm:w-full opacity-90 max-sm:pl-0 pl-[1vw] max-md:w-full max-md:text-[2.5vw] max-sm:text-[5vw] max-md:pb-[10vw]'>Thrilled to have been featured in several prominent media outlets and leading professionals across the world's best real estate and web3 institutions.</p>
             </div>
             
-            <div className='pt-[4vw] w-full overflow-hidden'>
+            <div className='py-[8vw] w-full overflow-hidden'>
                
                 <div className='overflow-hidden w-full'>
                     <div ref={marqueeRef1} className='flex whitespace-nowrap'>
                         {allImages.map((link, ind) => (
-                            <div key={ind} className='marquee-item flex-shrink-0 mx-[5vw]'>
-                                <div className='h-[4vw] w-auto'>
+                            <div key={ind} className='marquee-item flex-shrink-0 mx-[5vw] max-sm:pt-[15vw]'>
+                                <div className='h-[4vw] max-md:h-[8vw] max-sm:h-[15vw] w-auto'>
                                     <Image 
                                         src={link} 
                                         width={200} 
