@@ -29,7 +29,7 @@ const Header = () => {
             <div className='fixed z-52 w-full overflow-x-hidden overflow-y-hidden top-0 flex items-center justify-between max-md:h-[10vh] h-[13vh] px-[2vw] '>
                 <div className='flex justify-between w-full items-center px-[2vw]'>
                     <div className='h-auto w-[4.2vw] max-md:w-[7.3vw] max-sm:w-[9vw]'>
-                        <Image src='/assets/header/magma-logo.png' height={900} width={900} className='w-full h-full object-contain ' alt='navbar-logo' />
+                        <Image src='/assets/header/magma-logo.webp' height={900} width={900} className='w-full h-full object-contain ' alt='navbar-logo' />
                     </div>
 
                     <div className='flex gap-[1vw] max-md:gap-[3vw] text-white items-center z-50'>

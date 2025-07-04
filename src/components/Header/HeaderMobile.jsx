@@ -30,11 +30,12 @@ const MobileHeader = () => {
         
         <div className='h-auto w-[12vw]'>
           <Image 
-            src='/assets/header/magma-logo.png' 
+            src='/assets/header/magma-logo.webp' 
             height={900} 
             width={900} 
             className='w-full h-full object-contain' 
             alt='navbar-logo' 
+            priority
           />
         </div>
 
