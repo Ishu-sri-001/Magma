@@ -94,6 +94,7 @@ const FeaturedIn = () => {
                             <div key={ind} className='marquee-item flex-shrink-0 mx-[5vw] max-sm:pt-[15vw]'>
                                 <div className='h-[4vw] max-md:h-[8vw] max-sm:h-[15vw] w-auto'>
                                     <Image 
+                                        loading="lazy"
                                         src={link} 
                                         width={200} 
                                         height={100} 

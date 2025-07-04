@@ -99,6 +99,7 @@ const DTTCreationMobile = () => {
             {/* Image */}
             <div className={`max-sm:w-[80vw] max-sm:pl-[10vw] max-sm:h-full h-[45vw] mb-[3.2svw] w-fit max-sm:mb-[8vw] ${isActive === index ? 'opacity-100' : 'opacity-40'}`}>
               <Image
+                loading="lazy"
                 src={`/canva/creation/${images[index]}`}
                 width={900}
                 height={900}

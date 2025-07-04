@@ -73,7 +73,7 @@ const Blog = () => {
     return (
       <div key={idx} className='h-[14vw] max-md:h-[35vh] max-md:mb-[8vw] max-sm:h-[33vh] w-full max-md:rounded-[1vw] flex max-sm:flex-col max-md:flex-col gap-[2vw] cursor-pointer group max-sm:pb-[1vw]'>
         <div className='h-full w-[50%] max-md:w-full max-md:h-[62vh] max-sm:h-[30vh] max-sm:w-full rounded-[1.5vw] overflow-hidden cursor-pointer max-sm:rounded-[2vw] '>
-          <Image src={item.image} height={900} width={900} alt='blog-img' className='h-full w-full max-md:rounded-[4vw] object-cover group-hover:scale-105 duration-700 ease-in-out' />
+          <Image loading="lazy" src={item.image} height={900} width={900} alt='blog-img' className='h-full w-full max-md:rounded-[4vw] object-cover group-hover:scale-105 duration-700 ease-in-out' />
         </div>
         <div className='w-[50%] max-md:w-full max-sm:w-full px-[2vw] h-full  flex flex-col gap-[1.5vw] max-sm:gap-0 justify-center '>
            

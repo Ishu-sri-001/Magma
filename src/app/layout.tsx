@@ -47,15 +47,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-     <LenisSmoothScroll />
     <html lang="en">
-      <body
-        className={`${Font1.variable} ${Font2.variable} ${Font3.variable} antialiased`}
-        >
+      <body className={`${Font1.variable} ${Font2.variable} ${Font3.variable} antialiased`}>
+        <LenisSmoothScroll />
         {children}
       </body>
     </html>
-        </>
   );
 }

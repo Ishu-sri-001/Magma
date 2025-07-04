@@ -12,6 +12,7 @@ const Button = () => {
           <div className='absolute inset-0 flex items-center justify-center translate-x-0 group-hover:translate-x-[280%] duration-300 ease-in-out '>
             
             <Image 
+              loading="lazy"
               src='/assets/Button/arrow.svg' 
               width={900} 
               height={900} 

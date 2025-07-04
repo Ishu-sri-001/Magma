@@ -210,7 +210,7 @@ const handleMouseLeave = () => {
           <SwiperSlide key={idx}>
             <div className='w-[33vw] max-md:w-full max-sm:w-[74vw] h-fit rounded-[2vw] p-[0.5vw]'>
               <div className='h-[50vh] max-sm:h-[27vh] group w-fit max-sm:w-[75vw]] max-md:w-[75vw] rounded-[2vw] overflow-hidden max-md:h-[35vh]'>
-                <Image src={card.image} height={900} width={900} alt='stakeholder' className='h-full max-sm:rounded-[4vw] w-full object-fill group-hover:scale-110 duration-700 ease-in-out' />
+                <Image loading="lazy" src={card.image} height={900} width={900} alt='stakeholder' className='h-full max-sm:rounded-[4vw] w-full object-fill group-hover:scale-110 duration-700 ease-in-out' />
               </div>
               <div>
                 <p className='text-[2.5vw] max-sm:leading-[1] max-sm:text-[10vw] font-body py-[1vw] font-medium pl-[1vw] max-sm:py-[3vw] max-md:text-[6vw] max-md:font-medium max-sm:tracking-tighter'>{card.role}</p>

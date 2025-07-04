@@ -112,6 +112,7 @@ const DTTCreation = () => {
         <div className='w-[50%] h-fit sticky top-0 pl-[5vw]'>
           <div className='h-[80vh] w-[40vw] pb-[8vw]'>
            <Image
+                loading="lazy"
                 src={`/canva/creation/${images[isActive]}`}
                 width={900}
                 height={900}
